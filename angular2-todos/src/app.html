@@ -1,0 +1,13 @@
+<div *ng-for="#todo of todos">
+  <input type="checkbox" #chkbox [checked]="todo.completed" (click)="setCompleted(todo, chkbox.value)">
+  {{ todo.text }}
+  <a (click)="removeTodo(todo)"> remove </a>
+</div>
+
+<br>
+<button *ng-if="todos.length > 1" (click)="completeAll()"> complete all </button>
+<br>
+<hr>
+
+<input #todotext (keyup)="doneTyping($event)">
+<button (click)="addTodo(todotext)"> add todo </button>
