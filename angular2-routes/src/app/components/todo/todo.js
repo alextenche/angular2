@@ -8,20 +8,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var AppComponent = (function () {
-    function AppComponent() {
+var todo = (function () {
+    function todo() {
     }
-    AppComponent = __decorate([
+    todo = __decorate([
         angular2_1.Component({
-            selector: 'app'
+            selector: 'todo'
         }),
         angular2_1.View({
-            template: "\n\n  ",
-            directives: []
+            template: "\n    Welcome to todo page :)\n  "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], todo);
+    return todo;
 })();
-angular2_1.bootstrap(AppComponent);
-//# sourceMappingURL=app.js.map
+exports.todo = todo;
+;
+//# sourceMappingURL=todo.js.map

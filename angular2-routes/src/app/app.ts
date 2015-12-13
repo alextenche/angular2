@@ -1,8 +1,17 @@
-import {bootstrap, Component} from 'angular2/angular2';
+import { bootstrap, Component, View } from 'angular2/angular2';
+
+import { about } from './components/about/about';
+import { todo } from './components/todo/todo';
 
 @Component({
-    selector: 'app',
-    template: '<h1>My First Angular 2 App</h1>'
+    selector: 'app'
+})
+
+@View({
+  template: `
+
+  `,
+  directives: []
 })
 
 class AppComponent { }
