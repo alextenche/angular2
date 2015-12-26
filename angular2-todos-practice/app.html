@@ -1,0 +1,12 @@
+
+<div *ngFor="#todo of todos">
+  <input type="checkbox" #chkbox [(checked)]="todo.completed">
+  {{ todo.text }}
+  <a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"> remove </a>
+</div>
+
+<div class="form-inline">
+    <input class="form-control" #todotext (keyup)="doneTyping($event)">
+    <button class="btn btn-primary" (click)="addTodo(todotext)"> add todo </button>
+    <button class="btn btn-warning" *ngIf="todos.length > 1" (click)="completeAll()"> complete all </button>
+</div>
